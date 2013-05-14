@@ -1,0 +1,8 @@
+<tr>
+  <td><%= link_to problem.title, edit_problem_path(problem), class: (problem.completed? ? "checked muted" : "") %></td>
+  <td>
+    <span class='pull-right'>
+      <%= link_to "DELETE", problem_path(problem), class: "btn btn-mini btn-danger", method: "DELETE" %>
+    </span>
+  </td>
+</tr>

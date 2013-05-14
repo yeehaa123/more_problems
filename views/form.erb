@@ -1,0 +1,30 @@
+<% if @problem.saved? %>
+  <form action="<%= problem_path(@problem) %>" method="POST" class="form-horizontal">
+  <input type='hidden' name='_method' value='PUT' />
+<% else %>
+  <form action="<%= problems_path %>" method="POST" class="form-horizontal">
+<% end %>
+
+<div class="control-group">
+  <label class="control-label" for="title">Title</label>
+  <div class="controls">
+    <input type="text" id="title " placeholder="Title" name='problem[title]' value='<%= @problem.title %>' class='input-xlarge'>
+  </div>
+</div>
+<div class="control-group">
+  <label class="control-label" for="notes">Notes</label>
+  <div class="controls">
+    <textarea name='problem[notes]' class='input-xlarge'><%= @problem.notes %></textarea>
+  </div>
+</div>
+<div class="control-group">
+  <div class="controls">
+    <label class="checkbox">
+      <input type='hidden' name='problem[completed]' value='' />
+      <input type="checkbox" <%= @problem.completed? ? "checked" : "" %> name='problem[completed]' value='completed'> Completed
+    </label>
+    <button type="submit" class="btn">Save</button>
+  </div>
+</div>
+
+</form>

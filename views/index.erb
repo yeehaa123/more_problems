@@ -1,0 +1,13 @@
+<table .table-striped'>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @problems.each do |problem| %>
+      <%= erb :_problem, locals: {problem: problem} %>
+    <% end %>
+  </tbody>
+</table>
