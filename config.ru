@@ -46,7 +46,6 @@ class ProblemApp < Sinatra::Base
   end
 
   delete "/problems/:id" do
-    binding.pry
     @problem = Problem.get id(params)
     @problem.destroy
     redirect problems_path

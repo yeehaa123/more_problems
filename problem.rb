@@ -13,6 +13,7 @@ class Problem
   property :completed, String
   property :title, String
   property :notes, String
+  property :stake_holder, String
   
   def completed?
     !(self.completed.nil? || self.completed == "")
