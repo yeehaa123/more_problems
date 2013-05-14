@@ -10,7 +10,7 @@ class Problem
   include DataMapper::Resource
 
   property :id, Serial
-  property :completed, Boolean
+  property :completed, String
   property :title, String
   property :notes, String
   
