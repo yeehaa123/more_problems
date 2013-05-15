@@ -1,6 +1,6 @@
 require 'dm-core'
 require 'dm-migrations'
-
+require 'json'
 
 $authors = []
 $tags = []
@@ -15,6 +15,11 @@ class Problem
   property :notes, String
   property :stake_holder, String
   
+  def self.to_json
+    self.all.map(&:to_json)
+  end
+
+
   def completed?
     !(self.completed.nil? || self.completed == "")
   end
@@ -28,6 +33,14 @@ class Problem
         $tags << word
       end
     end
+  end
+
+  def to_h
+    { title: title, notes: notes, stake_holder: stake_holder }
+  end
+
+  def to_json
+    self.to_h.to_json
   end
 end
 

@@ -3,6 +3,7 @@ require 'sinatra/base'
 require './url_helpers'
 require 'sinatra/twitter-bootstrap'
 require './problem'
+require 'json'
 require 'pry'
 
 class ProblemApp < Sinatra::Base
@@ -49,6 +50,11 @@ class ProblemApp < Sinatra::Base
     @problem = Problem.get id(params)
     @problem.destroy
     redirect problems_path
+  end
+  
+  get "/api/problems" do
+    content_type :json
+    Problem.to_json
   end
 
   def id(params) 
