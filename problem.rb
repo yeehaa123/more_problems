@@ -10,9 +10,9 @@ class Problem
   include DataMapper::Resource
 
   property :id, Serial
-  property :completed, String
+  property :completed, Text
   property :title, String
-  property :notes, String
+  property :notes, Text
   property :stakeholder, String
   
   def self.to_json
