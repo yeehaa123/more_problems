@@ -4,7 +4,7 @@ require 'json'
 
 $authors = []
 $tags = []
-DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/development.rb")
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/development.sqlite3")
 
 class Problem
   include DataMapper::Resource
