@@ -5,16 +5,15 @@ require 'json'
 $authors = []
 $tags = []
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/development.sqlite3")
-DataMapper::Property::String.length(255)
 
 class Problem
   include DataMapper::Resource
 
   property :id, Serial
-  property :completed, String
-  property :title, String
-  property :notes, String
-  property :stakeholder, String
+  property :completed, Text
+  property :title, Text
+  property :notes, Text
+  property :stakeholder, Text
   
   def self.to_json
     self.all.map(&:to_json)
