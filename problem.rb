@@ -4,7 +4,7 @@ require 'json'
 
 $authors = []
 $tags = []
-DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.rb")
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/development.rb")
 
 class Problem
   include DataMapper::Resource
@@ -13,7 +13,7 @@ class Problem
   property :completed, String
   property :title, String
   property :notes, String
-  property :stake_holder, String
+  property :stakeholder, String
   
   def self.to_json
     self.all.map(&:to_json)

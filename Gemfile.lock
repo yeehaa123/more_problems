@@ -87,6 +87,7 @@ DEPENDENCIES
   data_mapper
   dm-sqlite-adapter
   faker
+  json
   pry
   shotgun
   sinatra

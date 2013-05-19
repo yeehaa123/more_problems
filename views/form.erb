@@ -6,6 +6,12 @@
 <% end %>
 
 <div class="control-group">
+  <label class="control-label" for="stakeholder">Stakeholder</label>
+  <div class="controls">
+    <input type="text" id="Stakeholder" placeholder="Stakeholder" name='problem[stakeholder]' value='<%= @problem.stakeholder %>' class='input-xlarge'>
+  </div>
+</div>
+<div class="control-group">
   <label class="control-label" for="title">Title</label>
   <div class="controls">
     <input type="text" id="title " placeholder="Title" name='problem[title]' value='<%= @problem.title %>' class='input-xlarge'>

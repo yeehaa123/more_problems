@@ -1,4 +1,5 @@
 <tr>
+  <td><%= problem.stakeholder %></td>
   <td><%= link_to problem.title, edit_problem_path(problem), class: (problem.completed? ? "checked muted" : "") %></td>
   <td>
     <span class='pull-right'>
