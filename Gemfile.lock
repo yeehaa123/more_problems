@@ -60,6 +60,7 @@ GEM
     json_pure (1.8.0)
     method_source (0.8.1)
     multi_json (1.7.3)
+    pg (0.15.1)
     pry (0.9.12)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -88,6 +89,7 @@ DEPENDENCIES
   dm-sqlite-adapter
   faker
   json
+  pg
   pry
   shotgun
   sinatra
