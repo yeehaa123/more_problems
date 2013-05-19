@@ -6,7 +6,6 @@ gem     'sinatra'
 gem     'shotgun'
 gem     'pg'
 gem     'data_mapper'
-gem     'dm-sqlite-adapter'
 gem     'sinatra-twitter-bootstrap', :require => 'sinatra/twitter-bootstrap'
 gem     'pry'
 gem     'faker'
@@ -14,4 +13,5 @@ gem     'json'
 
 group :development do
   gem     'sqlite3'
+  gem     'dm-sqlite-adapter'
 end
