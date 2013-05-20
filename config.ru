@@ -17,6 +17,8 @@ class ProblemApp < Sinatra::Base
 
   get "/problems" do
     @problems = Problem.all
+    @authors = Author.all
+    @concepts = Concept.all
     erb :index
   end
 

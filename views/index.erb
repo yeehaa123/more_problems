@@ -12,3 +12,7 @@
     <% end %>
   </tbody>
 </table>
+<div class="well">
+  <p><strong>Authors:</strong> <%= @authors.map(&:name).join(", ") %></p>
+  <p><strong>Concepts:</strong> <%= @concepts.map(&:name).join(", ") %></p>
+</div>

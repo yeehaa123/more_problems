@@ -4,16 +4,30 @@ require 'json'
 
 $authors = []
 $tags = []
-DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/development.sqlite3")
+DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://postgres:12345@localhost/development') 
+
+class Author
+  include DataMapper::Resource
+
+  property :id, Serial
+  property :name, String
+end
+
+class Concept
+  include DataMapper::Resource
+  
+  property :id, Serial
+  property :name, String
+end
 
 class Problem
   include DataMapper::Resource
 
   property :id, Serial
-  property :completed, Text
-  property :title, Text
-  property :notes, Text
-  property :stakeholder, Text
+  property :completed, String
+  property :title, String
+  property :notes, String
+  property :stakeholder, String
   
   def self.to_json
     self.all.map(&:to_json)
@@ -28,9 +42,9 @@ class Problem
     words = self.notes.split(" ")
     words.each do |word|
       if word.match /[A-Z].+/
-        $authors << word
+        Author.create(name: word) 
       else
-        $tags << word
+        Concept.create(name: word) 
       end
     end
   end
