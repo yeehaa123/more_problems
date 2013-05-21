@@ -35,6 +35,6 @@
 + Yeehaa: *"Technology is selling itself as a window, whereas it actually functions like a door"*
 
 
-## Heidegger - World Picture / Grid
+## Heidegger - World Picture
 
-+ Framing Device
++ Grid as Framing Device
