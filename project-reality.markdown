@@ -18,8 +18,9 @@
 + Test-First / Behaviour Driven Design
 
     describe "some incredibly complicated and smart feature" do
-      xit "will change the world" do
-        skip / pending
+        xit "will change the world" do
+          skip / pending
+        end
       end
     end
 
