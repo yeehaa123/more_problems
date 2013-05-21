@@ -17,11 +17,11 @@
 + First make it work, then improve (add features)
 + Test-First / Behaviour Driven Design
 
-> describe "some incredibly complicated and smart feature" do
->   xit "will change the world" do
->     skip / pending
->   end
-> end
+    describe "some incredibly complicated and smart feature" do
+      xit "will change the world" do
+        skip / pending
+      end
+    end
 
 ## Problem 2: How would the Code look like? 
 
