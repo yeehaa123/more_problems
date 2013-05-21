@@ -70,6 +70,3 @@ end
 
 use Rack::MethodOverride
 run ProblemApp
-# ~> /Users/jhoogst2/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/site_ruby/2.0.0/rubygems/core_ext/kernel_require.rb:45:in `require': cannot load such file -- sinatra/twitter-bootstrap (LoadError)
-# ~> 	from /Users/jhoogst2/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/site_ruby/2.0.0/rubygems/core_ext/kernel_require.rb:45:in `require'
-# ~> 	from -:4:in `<main>'

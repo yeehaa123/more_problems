@@ -2,8 +2,6 @@ require 'dm-core'
 require 'dm-migrations'
 require 'json'
 
-$authors = []
-$tags = []
 DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://postgres:12345@localhost/development') 
 
 class Author
@@ -18,6 +16,8 @@ class Concept
   
   property :id, Serial
   property :name, String
+
+
 end
 
 class Problem
